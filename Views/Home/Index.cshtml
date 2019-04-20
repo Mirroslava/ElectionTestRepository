@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Election10.Models.User>
+@{
+    //ViewData["Title"] = "Список смартфонов";
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Магазин смартфонов</title>
+</head>
+<body>
+    <h3>Смартфоны</h3>
+    <table>
+        <tr>
+            <td>Модель</td>
+            <td>Производитель</td>
+            <td>Цена</td>
+            <td></td>
+        </tr>
+        @foreach (var phone in Model)
+        {
+            <tr>
+                <td>@phone.Login</td>
+                <td>@phone.Email</td>
+                <td>@phone.Password</td>
+                <td><a href="~/Home/Buy/@phone.Id">Купить</a></td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
